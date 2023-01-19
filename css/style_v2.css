@@ -1,0 +1,319 @@
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(20, 20, 20);
+}
+
+header, footer {
+    width: auto;
+}
+
+header {
+    height: auto;
+    margin-bottom: 20px;
+}
+
+header, #floatingFooter {
+    background-image: url(../img/backgroundst.jpg);
+}
+
+a {
+    color: unset;
+}
+
+.pageContainer {
+    width: min(70vw, 1000px);
+    margin: auto;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#hero img {
+    width: min(70vw, 1000px);
+    box-shadow: 0px 3px 10px black;
+}
+
+#headerFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#headerLeft {
+    width: 40%;
+    height: 150px;
+    padding-left: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 120%;
+    border-left: 5px;
+    border-left-style: solid;
+    border-image: linear-gradient(transparent 10%, rgb(224, 153, 0)) 1;
+}
+
+#headerLeft div div {
+    padding: unset;
+}
+
+#headerLeft div img {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.orangeText {
+    color: rgb(224, 153, 0);
+}
+
+#headerRight {
+    margin-top: 20px;
+}
+
+#headerRight #settings {
+    padding: 5px 30px 5px 0px;
+}
+
+#settings {
+    text-align: center;
+    height: fit-content;
+    padding: 5px;
+    display: grid;
+    font-size: 80%;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(0, 0, 0, 5%);
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, black 30%, rgb(224, 224, 224), black) 1;
+}
+
+#settings img, div {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 5px;
+}
+
+header h3 {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#nav {
+    text-align: center;
+    width: 375px;
+    margin-top: 10px;
+    font-size: 80%;
+    line-height: 25px;
+}
+
+nav#nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#nav ul li {
+    padding-top: 16px;
+}
+
+nav#nav ul li:hover, #settings div:hover, #floatingFooter div:hover, .articleCard p:hover, .openItem:hover {
+    color: grey;
+}
+
+.navBorder {
+    background-image: linear-gradient(rgb(224, 224, 224), rgb(126, 126, 126) 40%);
+    height: 30px;
+    width: 1px;
+}
+
+.navButton {
+    width: 100px;
+    flex-grow: 1;
+}
+
+#catalogGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    background-color: white;
+    padding: unset;
+    padding-bottom: 50px;
+}
+
+.articleCard {
+    display: grid;
+    margin: auto;
+    padding: 50px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 385px 50px 50px;
+}
+
+.discount {
+    float: right;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 7px 5px;
+    background-color: rgb(47, 51, 51);
+    vertical-align: middle;
+    font-weight: bolder;
+    font-size: x-large;
+    color: orange;
+    border-style: inset;
+    border-width: 5px;
+    border-top-color: black;
+    border-left-color: rgb(71, 71, 71);
+    border-right-color: rgb(75, 75, 75);
+    border-bottom-color: rgb(70, 70, 70);
+    border-radius: 5px;
+    box-shadow: 
+        0px 0px 3px black, 
+        inset -7px 0 8px -8px lightgray, 
+        inset 0 -7px 8px -9px rgb(184, 184, 184);
+    z-index: 1;
+}
+
+.item {
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    padding: unset;
+    height: 420px;
+    width: 400px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.articleCard p {
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    z-index: 1;
+}
+
+.item img {
+    width: 100%;
+    margin: none;
+    position: relative;
+    top: -50px;
+}
+
+.openItem {
+    background-color: black;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    padding: 5px 20px;
+    margin: 5px 20px;
+}
+
+.price {
+    padding: 0px 20px;
+    text-align: right;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, white, black) 1;
+    position: relative;
+    top: -5px;
+}
+
+.oldPrice {
+    vertical-align: top;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-decoration: line-through 2px;
+    line-height: 27px;
+    padding-right: 5px;
+}
+
+.salePrice {
+    vertical-align: middle;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: orange;
+}
+
+footer {
+    padding-bottom: 20px;
+    background: rgb(58, 58, 58);
+    color: white;
+}
+
+#bottomBar {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -50px;
+    height: 25px;
+    background: rgb(58, 58, 58);
+}
+
+#floatingFooter {
+    display: block;
+    color: black;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 20px;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 50px;
+    position: relative;
+    top: -50px;
+    box-shadow: 0px 0px 5px black, inset 0px 5px 5px -5px black;
+}
+
+#floatingFooter i {
+    color: lightgray;
+    padding: 0px 30px;
+}
+
+#footerCards {
+    display: flex;
+    justify-content: space-between;
+    width: min(70vw, 800px);
+    margin: auto;
+}
+
+.fCard {
+    font-size: 70%;
+    text-align: center;
+    width: 150px;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: rgb(134, 134, 134);
+    width: 600px;
+    margin: 30px auto;
+    box-shadow: 0px 1px 2px black;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0px auto 30px;
+}
+
+footer p#copyright {
+    margin: auto;
+    text-align: center;
+}
